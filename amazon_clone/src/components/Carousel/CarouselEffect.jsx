@@ -9,7 +9,7 @@ function CarouselEffect() {
         autoPlay={true}
         infiniteLoop={true}
         showIndicators={false}
-        showThums={false}
+        showThumbs={false}
       >
         {img.map((imageItem, index) => {
           return <img src={imageItem} key={index} alt="Image" />;

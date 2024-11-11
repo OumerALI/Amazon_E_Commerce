@@ -1,4 +1,4 @@
-import CategoryInfo from "./CategoryInfo";
+import { CategoryInfo } from "./CategoryInfo";
 import CategoryCard from "./CategoryCard";
 import Style from "./Category.module.css";
 function Category() {
