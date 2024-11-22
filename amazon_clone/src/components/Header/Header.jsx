@@ -1,7 +1,7 @@
 import { SlLocationPin } from "react-icons/sl";
 import { BsSearch } from "react-icons/bs";
 import { BiCart } from "react-icons/bi";
-
+import { Link } from "react-router-dom";
 import LowerHeader from "./LowerHeader";
 import style from "./Header.module.css";
 
@@ -12,12 +12,12 @@ function Header() {
         <div className={style.header_container}>
           {/* logo */}
           <div className={style.logo_container}>
-            <a href="/">
+            <Link to="\">
               <img
                 src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
                 alt="Amazon"
               />
-            </a>
+            </Link>
             <div className={style.delivery}>
               <span>
                 <SlLocationPin />
@@ -48,22 +48,22 @@ function Header() {
               </select>
             </a>
 
-            <a href="">
+            <Link to="Sign In">
               <div>
                 <p>Sign In</p>
                 <span>Account & Lists</span>
               </div>
-            </a>
+            </Link>
             {/* orders  */}
-            <a href="">
+            <Link to="/orders">
               <p>return</p>
               <span>& Orders</span>
-            </a>
+            </Link>
             {/* cart */}
-            <a href="" className={style.cart}>
+            <Link to="/cart" className={style.cart}>
               <BiCart size={35} />
               <span>0</span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -73,15 +73,3 @@ function Header() {
 }
 
 export default Header;
-
-{
-  /* <div className="header_container">
-  <div className="logo_container"></div>
-  <div className="delivry"></div>
-  <div className="search"></div>
-  <div className="order_container"></div>
-</div>; */
-}
-// import { SlLocationPin } from "react-icons/sl";
-// import { BsSearch } from "react-icons/bs";
-// import { BiCart } from "react-icons/bi";

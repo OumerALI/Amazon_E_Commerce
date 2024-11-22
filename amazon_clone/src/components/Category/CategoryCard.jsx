@@ -1,27 +1,25 @@
 import Style from "./Category.module.css";
 
-import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function CategoryCard({ data }) {
+  // Destructure `data` for easier usage
+  const { title, imgLink } = data;
+
+  // Logging for debugging purposes
+  console.log(imgLink);
+
   return (
     <div className={Style.category}>
-      <span>
-        <h2>{data.title}</h2>
-      </span>
-      <a href="">
-        <img src={data.imgLink} alt={data.title} />
-      </a>
-      <p>shop now</p>
+      <Link to={`/category/${data.name}`}>
+        <span>
+          <h2>{data?.title}</h2>
+        </span>
+        <img src={data?.imgLink} alt={title} />
+        <p>Shop Now</p>
+      </Link>
     </div>
   );
 }
-
-CategoryCard.propTypes = {
-  data: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    imgLink: PropTypes.string.isRequired,
-    img: PropTypes.string.isRequired,
-  }).isRequired,
-};
 
 export default CategoryCard;
